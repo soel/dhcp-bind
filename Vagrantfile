@@ -22,5 +22,8 @@ Vagrant.configure(2) do |config|
     vb.customize ["modifyvm", :id, "--memory", "1024", "--cpus", "2", "--ioapic", "on"]
   end
 
-  config.vm.provision :shell, path: "provision/if.sh"
+  config.vm.provision "ansible" do |ansible|
+      ansible.playbook = "playbook.yml"
+  end
+
 end

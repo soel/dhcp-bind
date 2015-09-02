@@ -1,0 +1,6 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+    - name: Install dhcp
+      yum: name=dhcp state=installed
