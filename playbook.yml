@@ -4,3 +4,6 @@
   tasks:
     - name: Install dhcp
       yum: name=dhcp state=installed
+
+    - name: start dhcp
+      service: name=dhcp state=started
