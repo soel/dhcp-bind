@@ -1,0 +1,11 @@
+---
+# file: bind.yml
+
+- name: Install bind-chroot
+  yum: name=bind-chroot state=installed
+
+- name: copy named conf
+  copy: src=bind/named.conf dest=/etc/named.conf
+
+- name: named start
+  service: name=named state=started enabled=yes

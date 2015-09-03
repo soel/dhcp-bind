@@ -1,0 +1,11 @@
+---
+# file: dhcp.yml
+
+- name: Install dhcp
+  yum: name=dhcp state=installed
+
+- name: copy dhcpd conf
+  copy: src=dhcp/dhcpd.conf dest=/etc/dhcp/dhcpd.conf
+
+- name: start dhcpd
+  service: name=dhcpd state=started enabled=yes

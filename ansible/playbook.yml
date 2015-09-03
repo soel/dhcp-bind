@@ -1,0 +1,11 @@
+---
+- hosts: all
+  sudo: yes
+
+  tasks:
+    - name: selinux python
+      yum: name=libselinux-python state=installed
+
+    - include: dhcp.yml
+
+    - include: bind.yml
