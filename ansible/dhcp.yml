@@ -4,8 +4,9 @@
 - name: Install dhcp
   yum: name=dhcp state=installed
 
-- name: copy dhcpd conf
-  copy: src=dhcp/dhcpd.conf dest=/etc/dhcp/dhcpd.conf
+- name: setup dhcpd conf
+  template: src=dhcp/dhcpd.conf dest=/etc/dhcp/dhcpd.conf
+  when: dhcp_network_address is defined
 
 - name: start dhcpd
   service: name=dhcpd state=started enabled=yes

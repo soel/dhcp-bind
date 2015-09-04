@@ -1,0 +1,15 @@
+---
+dhcp_network_address: 192.168.0.0          # dhcp の配布を行うネットワークアドレス
+dhcp_netmask: 255.255.255.0                # 上記のサブネットマスク
+dhcp_default_route: 192.168.0.1            # dhcp で配布するデフォルトルート
+dhcp_default_route_netmask: 255.255.255.0  # 上記のサブネットマスク
+low_ip_address: 192.168.0.100              # 割り当てるアドレスの最小値
+high_ip_address: 192.168.0.200             # 割り当てるアドレスの最大値
+default_lease_time: 21600                  # デフォルトのリースタイム
+max_lease_time: 43200                      # 最大のリースタイム
+name_server_ip_address: 192.168.0.1        # dns サーバの ip アドレス
+name_server_ip_address_4_octet: 1          # dns サーバの ip アドレス 第4オクテット
+name_server_hostname: dns                  # dns サーバのホスト名(ドメイン名はいりません)
+domain_name: example.com                   # 正引きドメイン名
+reverse_name: 0.168.192.in-addr.arpa       # 逆引きドメイン名
+allow_query_network: 192.168.0.0/24        # キャッシュサーバとして使用を許可するネットワーク
