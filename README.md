@@ -16,7 +16,7 @@
   - 設定ファイルのテンプレートには example.com 等名前がついていますが、conf.yml の内容を
   読み取ってリネームされますので、ファイル名を変更する必要はありません
 - Vagrantfile を使ってVM上に構築できます
-  - Virtual Box と Vagrant のインストールするが必要です
+  - Virtual Box と Vagrant のインストールするが必要です
 
 ### 実行例
 
